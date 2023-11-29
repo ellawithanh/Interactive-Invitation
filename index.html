@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Weekend of a Lifetime Invitation</title>
+
+  <!-- Styles and Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:opsz@9..40&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="content">
+
+    <!-- ENTER SECTION -->
+    <div id="enterButtonDiv">
+      <button id="enterButton" onclick="toggleInvitation()">Open Invitation</button>
+      <!-- SVG element for background -->
+      <img src="Elements/worm-left2right.svg" class="animate-png" alt="Animated PNG">
+      <img src="Elements/worm-right2left.svg" class="animate-png-left" alt="Animated PNG">
+    </div>
+
+    <!-- INVITATION SECTION -->
+    <div id="initialInvitation">
+      <h1>You've been invited</h1>
+      <h2>To dust off those dancing shoes</h2>
+      <h3>And prepare for an electrifying experience</h3><br>
+      <p class="initialText">
+        Sthandwa sam' ❤️🥺,<br><br>
+        Remember those little hints I've been sprinkling about a surprise? 🙊<br><br>
+        Well, circle the 9th of December on your calendar 🗓️<br>because we're about to dive into an experience that'll set our hearts on fire! 🎵💃<br><br>
+        Are you up for diving into the unknown and accepting this thrilling invitation?
+      </p>
+
+      <!-- Accept or reject buttons -->
+      <div class="button-group"><br>
+        <button id="acceptButton" onclick="showReservationForm()">Hell Yes!</button>
+        <button id="sadlyNoButton" onclick="showSadMessage()">Sadly No :(</button>
+      </div>
+    </div>
+
+    <!-- REJECTION SECTION -->
+    <div id="sadMessage" class="sadGif" style="display: none;">
+      <a id="goBackLink" onclick="goBackToInitial()">👈 👈 Go Back</a>
+      <h1 style="font-size: 65px;">Invitation rejected</h1>
+      <img src="GIFs/rejected.gif" style="display: block; margin: 0 auto; width: 600px; border-radius: 5px;"><br>
+      <input type="text" id="rejectionReason" placeholder="State your reasons *here* as to why you're breaking my heart 🥺💔." required>
+      <button onclick="sendRejectionEmail()" class="submission" style="display: block; margin: 10px auto;">Submit rejection</button>
+      <p id="rejectionErrorMessage" style="display: none; color: red;">Please provide a reason for rejection.</p>
+    </div>
+
+    <!-- RSVP SECTION -->
+    <div id="reservationForm" style="display:none;">
+      <a id="goBackLink" onclick="goBackToInitial()">👈 👈 Go Back</a>
+      <h1>RSVP TODAY</h1>
+      <h2>To receive a mystery box</h2>
+      <h3>A mystery box with all the details will soon knock on your door! 📦</h3><br><br>
+
+      <form id="reservationDetails" onsubmit="return validateForm(event)">
+        <!-- Form fields -->
+        <!-- Error message -->
+        <p id="errorMessage" style="display: none; color: red; font-size: 18px; font-family: 'DM Sans', sans-serif">Please complete the missing field(s).</p>
+        <label for="fullName">Full name:</label>
+        <input type="text" id="fullName" name="fullName" placeholder="Enter your name" required><br><br>
+        <label for="availabilityDate">Select delivery date:</label>
+        <input type="date" id="availabilityDate" name="availabilityDate" min="2023-12-01" max="2023-12-05" required><br><br>
+        <label for="availabilityTime">Select delivery time:</label>
+        <input type="time" id="availabilityTime" name="availabilityTime" min="09:00" max="17:00" required><br><br><br>
+        <!-- Submit button -->
+        <button type="submit" class="submission">Submit RSVP</button>
+      </form>
+    </div>
+
+    <!-- INVITATION ACCEPTED -->
+    <div id="invitationAccepted" style="display: none;">
+      <a id="goBackLink" onclick="goBackToInitial()">👈 👈 Go Back</a>
+      <!-- Invitation Accepted content -->
+      <h1><br>Invitation Accepted!!!</h1>
+      <h2>An electrifying experience begins in...</h2><br>
+      <p id="countdown"></p>
+      <img src="GIFs/accepted.gif" alt="Invitation Accepted" width="500px" style="border-radius: 5px;">
+      <audio id="johnCenaTheme" src="Music/Money Trees.m4a"></audio>
+    </div>
+
+  </div>
+
+  <!-- JavaScript -->
+  <script src="scripts.js"></script>
+  <script>
+    // Your JavaScript functions...
+  </script>
+
+</body>
+</html>

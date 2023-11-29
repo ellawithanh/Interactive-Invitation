@@ -1,0 +1,230 @@
+/* Invitation Stylesheet */
+
+/* Global Styling */
+body {
+  background-color: #0077b4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: #FFF;
+}
+
+.content {
+  text-align: center;
+}
+
+.initialText {
+  text-align: center;
+  margin-top: 23px;
+  color: #FFF;
+  line-height: 28px;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Heading Styles */
+h1 {
+  color: #02a664;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+  text-shadow: 5px 5px 0 #F8DC00;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin: 0px 0px 30px;
+  font-family: 'Archivo Black', sans-serif;
+}
+
+h2 {
+  color: #EFB9D4;
+  font-size: 30px;
+  font-family: 'Archivo Black', sans-serif;
+  margin: 0px 0px 20px;
+  font-style: normal;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+  font-weight: 400;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: #F8DC00;
+  font-size: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 900;
+}
+
+/* "Go back" link */
+#goBackLink {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  color: #F8DC00;
+  text-decoration: none;
+}
+
+/* Button Styling */
+button,
+.submission {
+  background-color: #e35b1a;
+  color: #FFF;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  padding: 15px 30px 15px 30px;
+  margin: 10px;
+  text-transform: uppercase;
+  border: 1px solid #0077b4;
+  text-decoration: none;
+}
+
+/* Initial Invitation */
+#initialInvitation > * {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Rejection Message */
+#sadMessage {
+  display: none;
+}
+
+/* Rejection Reason */
+#rejectionReason {
+  width: 580px;
+  height: 70px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 0px;
+  border: 1px solid #000;
+  background-color: #efb9d4;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Countdown Styling */
+#countdown {
+  color: #F8DC00;
+  font-size: 30px;
+  font-family: 'Archivo Black', sans-serif;
+  margin: 0px 0px 20px;
+  font-style: normal;
+  -webkit-text-stroke-width: 2px;
+  stroke-width: 2px;
+  -webkit-text-stroke-color: #000;
+  stroke: #000;
+  font-weight: 400;
+  font-size: 45px;
+  text-transform: uppercase;
+}
+
+/* Placeholder Styling */
+::placeholder {
+  color: black;
+}
+
+/* Hover Styling */
+.button-group :hover {
+  background-color: #F8DC00;
+  color: #000;
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+#enterButtonDiv :hover {
+  background-color: #F8DC00;
+  color: #000;
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.submission:hover {
+  background-color: #F8DC00;
+  color: #000;
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Group */
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+/* Accept and Reject Button Styling */
+#acceptButton,
+#sadlyNoButton :hover {
+  margin: 10px;
+}
+
+#enterButton {
+  background-color: #e35b1a;
+  color: #FFF;
+  border-radius: 5px;
+  font-weight: 900;
+  font-size: 18px;
+  font-family: 'DM Sans', sans-serif;
+  padding: 20px 35px 20px 35px;
+  margin: 10px;
+  text-transform: uppercase;
+  border: 1px solid #0077b4;
+  text-decoration: none;
+}
+
+/* Enter Button Div */
+#enterButtonDiv {
+  text-align: center;
+}
+
+/* Animation for PNG */
+.animate-png {
+  position: absolute;
+  bottom: 400px;
+  right: -100px; /* Initial position outside the viewport */
+  width: 350px; /* Set the width of the image */
+  animation: slideAnimation 2s linear forwards; /* Animate immediately for 2 seconds and stop */
+}
+
+@keyframes slideAnimation {
+  0% {
+    transform: translateX(100%); /* Start position, outside the viewport */
+  }
+  100% {
+    transform: translateX(0%); /* End position, stop at the visible position */
+  }
+}
+
+/* Animation for PNG (Left) */
+.animate-png-left {
+  position: absolute;
+  bottom: 60px; /* Set a different bottom value for the second element */
+  left: -100px; /* Initial position outside the viewport */
+  width: 350px; /* Set the width of the image */
+  animation: slideAnimationLeft 3s linear forwards; /* Animate immediately for 2 seconds and stop */
+}
+
+@keyframes slideAnimationLeft {
+  0% {
+    transform: translateX(-100%); /* Start position, outside the viewport */
+  }
+  100% {
+    transform: translateX(0%); /* End position, stop at the visible position */
+  }
+}
+
+/* Hover Effect for Animated PNG */
+#enterButtonDiv .animate-png:hover,
+#enterButtonDiv .animate-png-left:hover {
+  background-color: #0077b4;
+  box-shadow: none;
+}
